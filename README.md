@@ -22,8 +22,7 @@ Welcome to the Contact Manager Website! This website allows users to create and 
 
 ## Preview
 
-[Contact Manager Website](#) - [Click here to view the hosted website](#)
-
+**Hosted Project Link: [Contact Manager Website](https://topcontactmanager.netlify.app/)**
 ## Getting Started
 
 ### Prerequisites
@@ -40,4 +39,4 @@ Welcome to the Contact Manager Website! This website allows users to create and 
 
 
 
-https://topcontactmanager.netlify.app/
+
