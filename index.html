@@ -8,38 +8,56 @@
     <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-    <section style="background: rgb(105, 25, 105)" class="header">
-        <nav style="background: rgb(105, 25, 105)" class="navbar navbar-expand-lg bg-body-tertiary">
+    <section style="background:linear-gradient(108deg, #cff4de 0%, #eafff3 100%);" class="header">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background: linear-gradient(108deg, #cff4de 0%, #eafff3 100%);">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">CONTACT MANAGER</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Features</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Pricing</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Dropdown link
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                        </li>
-                    </ul>
+              <a class="navbar-brand" href="#">Navbar</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                  <a class="nav-link active" aria-current="page" href="#">HOME</a>
+                  <a class="nav-link" href="#">ADD CONTACT</a>
+                  <a class="nav-link" href="#">DELETE CONTACT</a>
+                  <a class="nav-link" href="#">VIEW CONTACT</a>
                 </div>
+              </div>
             </div>
-        </nav>
+          </nav>
+    </section>
+    <section class="contact-form" style=" background:linear-gradient(108deg, #cff4de 0%, #eafff3 100%);>
+        <form>
+            <div class="form-group">
+              <label for="exampleFormControlInput1">FIRST NAME</label>
+              <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter your first name">
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlInput1">SUR NAME</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter your middle name">
+              </div>
+              <div class="form-group">
+                <label for="exampleFormControlInput1">LAST NAME</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter your last name">
+              </div>
+            <div class="form-group">
+              <label for="exampleFormControlSelect1">LABEL</label>
+              <select class="form-control" id="exampleFormControlSelect1">
+                <option>WORK</option>
+                <option>HOME</option>
+                <option>FAX</option>
+                <option>WORK FAX</option>
+                <option>PERSONAL</option>
+              </select>
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Email address</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+              </div>   
+              <div class="form-group">
+                <label for="exampleFormControlInput1">DATE OF BIRTH</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Example:03/05/2004">
+              </div>
     </section>
     <script src="assets/script.js"></script>
 </body>
