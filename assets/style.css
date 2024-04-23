@@ -2,10 +2,23 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    background:linear-gradient(108deg, #cff4de 0%, #eafff3 100%);
 }
 .header {
     border: none;
 }
 .navbar {
-    background-color: rgb(105, 25, 105) !important;
+    background-color:linear-gradient(108deg, #cff4de 0%, #eafff3 100%) !important;
 }
+.contact-form
+{
+    margin-left:10%;
+    width:80%;
+    display: inline-block;
+    height: 500px;  
+    color:green;  
+    background:linear-gradient(108deg, #cff4de 0%, #eafff3 100%);
+    font-size: 18px;
+    font-weight: bold;
+}
+
