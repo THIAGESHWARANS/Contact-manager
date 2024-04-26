@@ -47,3 +47,33 @@ function saveContactToLocalJSON(contactData) {
         console.error('LocalStorage is not supported in this browser.');
     }
 }
+function exportLocalStorageToFile() {
+    // Retrieve saved contacts from localStorage
+    const savedContacts = JSON.parse(localStorage.getItem('contacts')) || [];
+
+    // Convert contacts data to JSON string
+    const jsonData = JSON.stringify(savedContacts, null, 2); // null and 2 are for formatting
+
+    // Create a Blob object containing the JSON data
+    const blob = new Blob([jsonData], { type: 'application/json' });
+
+    // Create a temporary URL for the Blob
+    const url = URL.createObjectURL(blob);
+
+    // Create a temporary anchor element
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'contacts.json'; // Filename for the downloaded file
+
+    // Append the anchor element to the document body
+    document.body.appendChild(a);
+
+    // Programmatically trigger a click event on the anchor element
+    a.click();
+
+    // Remove the anchor element from the document body
+    document.body.removeChild(a);
+
+    // Revoke the Blob URL to release resources
+    URL.revokeObjectURL(url);
+}
