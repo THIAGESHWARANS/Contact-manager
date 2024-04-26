@@ -16,7 +16,7 @@ body {
     width:80%;
     display: inline-block;
     height: 500px;  
-    color:green;  
+    color:rgba(11, 79, 9, 0.773);  
     background:linear-gradient(108deg, #cff4de 0%, #eafff3 100%);
     font-size: 18px;
     font-weight: bold;

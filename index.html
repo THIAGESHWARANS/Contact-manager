@@ -20,100 +20,49 @@
                   <a class="nav-link active" aria-current="page" href="#">HOME</a>
                   <a class="nav-link" href="#">ADD CONTACT</a>
                   <a class="nav-link" href="#">DELETE CONTACT</a>
-                  <a class="nav-link" href="view_contacts.html">VIEW CONTACT</a>
+                  <a class="nav-link" href="view_contacts.html">VIEW CONTACT</a> <!-- Link to view_contacts.html page -->
                 </div>
               </div>
             </div>
           </nav>
     </section>
     <section class="contact-form" style=" background:linear-gradient(108deg, #cff4de 0%, #eafff3 100%);">
-        <form id="contactForm" onsubmit="saveContact(); return false;">
-            <div class="form-group">
-              <label for="firstName">FIRST NAME</label>
-              <input type="text" class="form-control" id="firstName" placeholder="Enter your first name" required>
-            </div>
-            <div class="form-group">
-                <label for="surName">SUR NAME</label>
-                <input type="text" class="form-control" id="surName" placeholder="Enter your middle name" required>
-              </div>
-              <div class="form-group">
-                <label for="lastName">LAST NAME</label>
-                <input type="text" class="form-control" id="lastName" placeholder="Enter your last name" required>
-              </div>
-            <div class="form-group">
-              <label for="label">LABEL</label>
-              <select class="form-control" id="label">
-                <option>WORK</option>
-                <option>HOME</option>
-                <option>FAX</option>
-                <option>WORK FAX</option>
-                <option>PERSONAL</option>
-              </select>
-            </div>
-            <div class="form-group">
-                <label for="email">Email address</label>
-                <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
-              </div>   
-              <div class="form-group">
-                <label for="dob">DATE OF BIRTH</label>
-                <input type="text" class="form-control" id="dob" placeholder="Example: 03/05/2004" required>
-              </div>
-              <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
+        <div class="container">
+            <form id="contactForm">
+                <div class="mb-3">
+                    <label for="firstName" class="form-label">First Name</label>
+                    <input type="text" class="form-control" id="firstName" placeholder="Enter your first name">
+                </div>
+                <div class="mb-3">
+                    <label for="surName" class="form-label">Sur Name</label>
+                    <input type="text" class="form-control" id="surName" placeholder="Enter your middle name">
+                </div>
+                <div class="mb-3">
+                    <label for="lastName" class="form-label">Last Name</label>
+                    <input type="text" class="form-control" id="lastName" placeholder="Enter your last name">
+                </div>
+                <div class="mb-3">
+                    <label for="label" class="form-label">Label</label>
+                    <select class="form-control" id="label">
+                        <option>WORK</option>
+                        <option>HOME</option>
+                        <option>FAX</option>
+                        <option>WORK FAX</option>
+                        <option>PERSONAL</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                </div>
+                <div class="mb-3">
+                    <label for="dob" class="form-label">Date of Birth</label>
+                    <input type="text" class="form-control" id="dob" placeholder="Example:03/05/2004">
+                </div>
+                <button type="button" class="btn btn-primary" id="saveContactBtn">Save Contact</button>
+            </form>
+        </div>
     </section>
     <script src="assets/script.js"></script>
-    <script>
-        function saveContact() {
-            var firstName = document.getElementById('firstName').value;
-            var surName = document.getElementById('surName').value;
-            var lastName = document.getElementById('lastName').value;
-            var label = document.getElementById('label').value;
-            var email = document.getElementById('email').value;
-            var dob = document.getElementById('dob').value;
-
-            var contact = {
-                "firstName": firstName,
-                "surName": surName,
-                "lastName": lastName,
-                "label": label,
-                "email": email,
-                "dob": dob
-            };
-
-            // Check if contacts already exist
-            var contacts = JSON.parse(localStorage.getItem('contacts')) || [];
-            contacts.push(contact);
-
-            // Save to localStorage
-            localStorage.setItem('contacts', JSON.stringify(contacts));
-
-            // Update contacts displayed on the View Contacts page
-            updateViewContacts();
-
-            // Optional: Notify the user
-            alert("Contact saved successfully!");
-        }
-
-        function updateViewContacts() {
-            fetch('contacts.json')
-                .then(response => response.json())
-                .then(data => {
-                    var tableBody = document.getElementById('contactTableBody');
-                    tableBody.innerHTML = '';
-
-                    data.forEach(function(contact) {
-                        var row = `<tr>
-                                        <td>${contact.firstName}</td>
-                                        <td>${contact.surName}</td>
-                                        <td>${contact.lastName}</td>
-                                        <td>${contact.label}</td>
-                                        <td>${contact.email}</td>
-                                        <td>${contact.dob}</td>
-                                    </tr>`;
-                        tableBody.innerHTML += row;
-                    });
-                });
-        }
-    </script>
 </body>
 </html>

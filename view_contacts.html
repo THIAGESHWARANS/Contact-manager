@@ -4,50 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>View Contacts</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 <body>
-    <div class="container">
-        <h1>Contacts</h1>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th scope="col">First Name</th>
-                    <th scope="col">Sur Name</th>
-                    <th scope="col">Last Name</th>
-                    <th scope="col">Label</th>
-                    <th scope="col">Email</th>
-                    <th scope="col">Date of Birth</th>
-                </tr>
-            </thead>
-            <tbody id="contactTableBody">
-                
-            </tbody>
-        </table>
-    </div>
+    <h1>View Contacts</h1>
+    <div id="contactsList"></div>
+
     <script>
-        function updateViewContacts() {
-            fetch('contacts.json')
-                .then(response => response.json())
-                .then(data => {
-                    var tableBody = document.getElementById('contactTableBody');
-                    tableBody.innerHTML = '';
+        // Retrieve saved contacts from localStorage
+        const savedContacts = JSON.parse(localStorage.getItem('contacts')) || [];
 
-                    data.forEach(function(contact) {
-                        var row = `<tr>
-                                        <td>${contact.firstName}</td>
-                                        <td>${contact.surName}</td>
-                                        <td>${contact.lastName}</td>
-                                        <td>${contact.label}</td>
-                                        <td>${contact.email}</td>
-                                        <td>${contact.dob}</td>
-                                    </tr>`;
-                        tableBody.innerHTML += row;
-                    });
-                });
-        }
-
-        updateViewContacts();
+        // Display saved contacts
+        const contactsList = document.getElementById('contactsList');
+        savedContacts.forEach(contact => {
+            const contactDiv = document.createElement('div');
+            contactDiv.innerHTML = `
+                <p>Name: ${contact.firstName} ${contact.lastName}</p>
+                <p>Label: ${contact.label}</p>
+                <p>Email: ${contact.email}</p>
+                <p>Date of Birth: ${contact.dob}</p>
+                <hr>
+            `;
+            contactsList.appendChild(contactDiv);
+        });
     </script>
 </body>
 </html>
