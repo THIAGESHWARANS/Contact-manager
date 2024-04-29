@@ -2,21 +2,26 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background:linear-gradient(108deg, #cff4de 0%, #eafff3 100%);
+    color:rgba(11, 79, 9, 0.773); 
+    font-weight:bold;
 }
+
 
 .container {
     max-width: 800px;
     margin: 20px auto;
-    padding: 20px;
+    padding: 20%;
     background-color: #fff;
-    border-radius: 8px;
+    border-radius: 8%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color:rgba(11, 79, 9, 0.773); 
 }
 
 h1 {
     text-align: center;
-    color: #333;
+    color:black;
+    font-family: 'Great vibes',cursive;
 }
 
 .contact {
