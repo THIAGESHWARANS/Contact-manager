@@ -47,4 +47,19 @@ body {
     font-size: 18px;
     font-weight: bold;
 }
+#saveContactBtn {
+    background-color: #023d54;
+    color: white;
+    border: none; /* Remove button border */
+    padding: 10px 20px; /* Adjust button padding as needed */
+    border-radius: 5px; /* Apply border-radius for rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a slight shadow for depth */
+    background-image: linear-gradient(45deg, #0272a9, #025c80); /* Apply gradient effect */
+}
+
+#saveContactBtn:hover {
+    background-image: linear-gradient(45deg, #025c80, #0272a9); /* Adjust gradient on hover */
+}
+
+
 
