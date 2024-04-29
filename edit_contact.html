@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/style-viewcontact.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Contact</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap">
+    <link rel="stylesheet" href="assets\style-editcontact.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Edit Contact</h1>
+        <form id="editContactForm">
+            <div class="mb-3">
+                <label for="firstName" class="form-label">First Name</label>
+                <input type="text" class="form-control" id="firstName" placeholder="Enter your first name" value="">
+            </div>
+            <div class="mb-3">
+                <label for="lastName" class="form-label">Last Name</label>
+                <input type="text" class="form-control" id="lastName" placeholder="Enter your last name" value="">
+            </div>
+            <div class="mb-3">
+                <label for="label" class="form-label">Label</label>
+                <select class="form-control" id="label">
+                    <option>WORK</option>
+                    <option>HOME</option>
+                    <option>FAX</option>
+                    <option>WORK FAX</option>
+                    <option>PERSONAL</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="email" placeholder="name@example.com" value="">
+            </div>
+            <div class="mb-3">
+                <label for="dob" class="form-label">Date of Birth</label>
+                <input type="text" class="form-control" id="dob" placeholder="Example: 03/05/2004" value="">
+            </div>
+            <button type="button" class="btn btn-primary" id="updateContactBtn">Update Contact</button>
+        </form>
+    </div>
+
+    <script>
+        // Parse URL parameters to get the index of the contact to edit
+        const urlParams = new URLSearchParams(window.location.search);
+        const index = parseInt(urlParams.get('index'));
+        const contact = JSON.parse(localStorage.getItem('contacts'))[index];
+
+        // Populate form fields with contact details
+        document.getElementById('firstName').value = contact.firstName;
+        document.getElementById('lastName').value = contact.lastName;
+        document.getElementById('label').value = contact.label;
+        document.getElementById('email').value = contact.email;
+        document.getElementById('dob').value = contact.dob;
+
+        // Add event listener for update button
+        document.getElementById('updateContactBtn').addEventListener('click', function () {
+            // Update contact details
+            contact.firstName = document.getElementById('firstName').value;
+            contact.lastName = document.getElementById('lastName').value;
+            contact.label = document.getElementById('label').value;
+            contact.email = document.getElementById('email').value;
+            contact.dob = document.getElementById('dob').value;
+
+            // Update localStorage
+            const savedContacts = JSON.parse(localStorage.getItem('contacts'));
+            savedContacts[index] = contact;
+            localStorage.setItem('contacts', JSON.stringify(savedContacts));
+
+            // Redirect back to view_contacts.html
+            window.location.href = 'view_contacts.html';
+        });
+    </script>
+</body>
+</html>
