@@ -2,18 +2,20 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    background:linear-gradient(108deg, #cff4de 0%, #eafff3 100%);
-   
+    background: linear-gradient(108deg, #cff4de 0%, #eafff3 100%);
 }
+
 .header {
     border: none;
 }
+
 .navbar {
-    background-color:linear-gradient(108deg, #cff4de 0%, #eafff3 100%) !important;
+    background-color: linear-gradient(108deg, #cff4de 0%, #eafff3 100%) !important;
     font-family: 'abril fatface';
-    font-weight:bolder;
-    color:rgba(11, 79, 9, 0.773);  
+    font-weight: bolder;
+    color: rgba(11, 79, 9, 0.773);  
 }
+
 .navbar-brand {
     position: relative;
     margin-left: 2%;
@@ -23,43 +25,43 @@ body {
     color: transparent;
     background-image: linear-gradient(to right, black, #025c80);
     -webkit-background-clip: text;
-    background-clip: text; /
+    background-clip: text;
 }
 
-
-
-.nav-link{
-    color:black;
+.nav-link {
+    color: black;
 }
+
 .form-label {
     font-family: 'Oleo Script';
     font-weight: bolder;
     font-size: larger;
-    color: rgba(11, 79, 9, 0.773); 
+    color: rgba(11, 79, 9, 0.773);
     background-image: linear-gradient(to right, rgba(11, 79, 9, 0.5), rgba(11, 79, 9, 1));
-    -webkit-background-clip: text; 
-    background-clip: text; 
+    -webkit-background-clip: text;
+    background-clip: text;
 }
 
-.navbar-nav{
+.navbar-nav {
     position: relative;
-    margin-left:50%;
+    margin-left: 50%;
     font-weight: bold;
-    color:rgba(11, 79, 9, 0.773);  
+    color: rgba(11, 79, 9, 0.773);  
     font-size: larger;
 }
-.contact-form
-{
-    margin-left:10%;
-    width:80%;
+
+.contact-form {
+    margin-left: 10%;
+    width: 80%;
     display: inline-block;
     height: 500px;  
-    color:rgba(11, 79, 9, 0.773);  
-    background:linear-gradient(108deg, #cff4de 0%, #eafff3 100%);
+    color: rgba(11, 79, 9, 0.773);  
+    background: linear-gradient(108deg, #cff4de 0%, #eafff3 100%);
     font-size: 18px;
     font-weight: bold;
 }
-#saveContactBtn {
+
+#updateContactBtn {
     background-color: #023d54;
     color: white;
     border: none; 
@@ -69,9 +71,24 @@ body {
     background-image: linear-gradient(45deg, #0272a9, #025c80); 
 }
 
-#saveContactBtn:hover {
+#updateContactBtn:hover {
     background-image: linear-gradient(45deg, #025c80, #0272a9);
 }
+.form-control {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    font-size: 16px;
+    color: rgba(11, 79, 9, 0.773);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
 
-
-
+.form-control:focus {
+    outline: none;
+    border-color: #025c80;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

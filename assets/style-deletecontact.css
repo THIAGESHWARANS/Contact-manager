@@ -9,16 +9,16 @@ body {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
-    background:linear-gradient(108deg, #cff4de 0%, #eafff3 100%);
+    background: linear-gradient(108deg, #cff4de 0%, #eafff3 100%);
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    font-family: 'Oleo script';
+    font-family: 'Oleo Script', cursive;
 }
 
 h1 {
     text-align: center;
     color: transparent; 
-    font-family: 'Great vibes', cursive;
+    font-family: 'Great Vibes', cursive;
     background-image: linear-gradient(to right, black, #025c80); 
     -webkit-background-clip: text; 
     background-clip: text; 
@@ -39,8 +39,6 @@ h1 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     background-color: #fff; 
 }
-
-
 
 .contact h2 {
     margin-top: 0;
