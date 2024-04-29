@@ -6,26 +6,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>View Contacts</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap">
+    <style>
+        /* Style for the edit button */
+        .edit-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #023d54;
+            color: white;
+            text-decoration: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: background-image 0.3s;
+        }
 
+        .edit-btn:hover {
+            background-image: linear-gradient(45deg, #025c80, #0272a9);
+        }
+
+        .container {
+            margin: 20px auto;
+            padding: 20px;
+            background: linear-gradient(108deg, #cff4de 0%, #eafff3 100%);
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            font-family: 'Oleo Script';
+        }
+    </style>
 </head>
 <body>
-    <h1>View Contacts</h1>
-    <div id="contactsList"></div>
+    <div class="container">
+        <h1>View Contacts</h1>
+        <div id="contactsList"></div>
+    </div>
 
     <script>
-        // Retrieve saved contacts from localStorage
         const savedContacts = JSON.parse(localStorage.getItem('contacts')) || [];
-
-        // Display saved contacts
         const contactsList = document.getElementById('contactsList');
-        savedContacts.forEach(contact => {
+
+        savedContacts.forEach((contact, index) => {
             const contactDiv = document.createElement('div');
+            contactDiv.classList.add('contact');
             contactDiv.innerHTML = `
-                <p>Name: ${contact.firstName} ${contact.lastName}</p>
-                <p>Label: ${contact.label}</p>
-                <p>Email: ${contact.email}</p>
-                <p>Date of Birth: ${contact.dob}</p>
-                <hr>
+                <h2>${contact.firstName} ${contact.lastName}</h2>
+                <p><strong>Label:</strong> ${contact.label}</p>
+                <p><strong>Email:</strong> ${contact.email}</p>
+                <p><strong>Date of Birth:</strong> ${contact.dob}</p>
+                <a class="edit-btn" href="edit_contact.html?index=${index}">Edit</a>
             `;
             contactsList.appendChild(contactDiv);
         });
