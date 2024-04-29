@@ -3,12 +3,38 @@ body {
     padding: 0;
     overflow-x: hidden;
     background:linear-gradient(108deg, #cff4de 0%, #eafff3 100%);
+   
 }
 .header {
     border: none;
 }
 .navbar {
     background-color:linear-gradient(108deg, #cff4de 0%, #eafff3 100%) !important;
+    font-family: 'abril fatface';
+    font-weight:bolder;
+    color:rgba(11, 79, 9, 0.773);  
+}
+.navbar-brand{
+    position: relative;
+    margin-left:2%;
+    font-weight: bolder;
+    font-size:xx-large;
+    font-family: 'Great vibes',cursive;
+}
+.nav-link{
+    color:black;
+}
+.form-label{
+    font-family: 'Oleo Script';
+    font-weight: bolder;
+    font-size: larger;
+}
+.navbar-nav{
+    position: relative;
+    margin-left:50%;
+    font-weight: bold;
+    color:rgba(11, 79, 9, 0.773);  
+    padding-left:5%;
 }
 .contact-form
 {
