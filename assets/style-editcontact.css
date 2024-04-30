@@ -15,7 +15,13 @@ body {
     font-weight: bolder;
     color: rgba(11, 79, 9, 0.773);  
 }
-
+.navbar-nav{
+    position: relative;
+    margin-left:50%;
+    font-weight: bold;
+    color:rgba(11, 79, 9, 0.773);  
+    font-size: larger;
+}
 .navbar-brand {
     position: relative;
     margin-left: 2%;

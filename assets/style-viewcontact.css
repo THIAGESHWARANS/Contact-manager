@@ -14,7 +14,12 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     font-family: 'Oleo script';
 }
-
+.navbar {
+    background-color:linear-gradient(108deg, #cff4de 0%, #eafff3 100%) !important;
+    font-family: 'abril fatface';
+    font-weight:bolder;
+    color:rgba(11, 79, 9, 0.773);  
+}
 h1 {
     text-align: center;
     color: transparent; 
