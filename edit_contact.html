@@ -43,33 +43,27 @@
     </div>
 
     <script>
-        // Parse URL parameters to get the index of the contact to edit
         const urlParams = new URLSearchParams(window.location.search);
         const index = parseInt(urlParams.get('index'));
         const contact = JSON.parse(localStorage.getItem('contacts'))[index];
 
-        // Populate form fields with contact details
         document.getElementById('firstName').value = contact.firstName;
         document.getElementById('lastName').value = contact.lastName;
         document.getElementById('label').value = contact.label;
         document.getElementById('email').value = contact.email;
         document.getElementById('dob').value = contact.dob;
 
-        // Add event listener for update button
         document.getElementById('updateContactBtn').addEventListener('click', function () {
-            // Update contact details
             contact.firstName = document.getElementById('firstName').value;
             contact.lastName = document.getElementById('lastName').value;
             contact.label = document.getElementById('label').value;
             contact.email = document.getElementById('email').value;
             contact.dob = document.getElementById('dob').value;
 
-            // Update localStorage
             const savedContacts = JSON.parse(localStorage.getItem('contacts'));
             savedContacts[index] = contact;
             localStorage.setItem('contacts', JSON.stringify(savedContacts));
 
-            // Redirect back to view_contacts.html
             window.location.href = 'view_contacts.html';
         });
     </script>
