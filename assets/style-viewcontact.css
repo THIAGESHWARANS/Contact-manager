@@ -28,7 +28,26 @@ h1 {
     -webkit-background-clip: text; 
     background-clip: text; 
 }
-
+.navbar-brand {
+    position: relative;
+    margin-left: 2%;
+    font-weight: bolder;
+    font-size: xx-large;
+    font-family: 'Great vibes', cursive;
+    color: transparent;
+    background-image: linear-gradient(to right, black, #025c80);
+    -webkit-background-clip: text;
+    background-clip: text; /
+}
+.navbar {
+    background-color:linear-gradient(108deg, #cff4de 0%, #eafff3 100%) !important;
+    font-family: 'abril fatface';
+    font-weight:bolder;
+    color:rgba(11, 79, 9, 0.773);  
+}
+.nav-link{
+    color:black;
+}
 .contact {
     margin-bottom: 20px;
     padding: 15px;
