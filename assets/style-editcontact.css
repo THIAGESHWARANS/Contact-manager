@@ -23,15 +23,15 @@ body {
     font-size: larger;
 }
 .navbar-brand {
-    position: relative;
-    margin-left: 2%;
-    font-weight: bolder;
-    font-size: xx-large;
-    font-family: 'Great vibes', cursive;
-    color: transparent;
-    background-image: linear-gradient(to right, black, #025c80);
-    -webkit-background-clip: text;
-    background-clip: text;
+    position: relative !important;
+    margin-left: 2% !important;
+    font-weight: bolder !important;
+    font-size: xx-large !important;
+    font-family: 'Great vibes', cursive !important;
+    color: transparent !important;
+    background-image: linear-gradient(to right, black, #025c80) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
 }
 
 .nav-link {

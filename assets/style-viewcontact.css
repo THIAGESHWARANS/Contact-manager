@@ -9,67 +9,53 @@ body {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
-    background:linear-gradient(108deg, #cff4de 0%, #eafff3 100%);
+    background: linear-gradient(108deg, #cff4de 0%, #eafff3 100%);
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    font-family: 'Oleo script';
+    font-family: 'Oleo Script';
 }
-.navbar {
-    background-color: linear-gradient(108deg, #cff4de 0%, #eafff3 100%) !important;
-    font-family: 'abril fatface';
-    font-weight: bolder;
-    color: rgba(11, 79, 9, 0.773);  
-}
-.navbar-nav{
-    position: relative;
-    margin-left:50%;
-    font-weight: bold;
-    color:rgba(11, 79, 9, 0.773);  
-    font-size: larger;
-}
-.navbar-brand {
-    position: relative;
-    margin-left: 2%;
-    font-weight: bolder;
-    font-size: xx-large;
-    font-family: 'Great vibes', cursive;
+
+h1 {
+    text-align: center;
     color: transparent;
+    font-family: 'Great Vibes', cursive;
     background-image: linear-gradient(to right, black, #025c80);
     -webkit-background-clip: text;
     background-clip: text;
 }
 
+.navbar {
+    background-color: linear-gradient(108deg, #cff4de 0%, #eafff3 100%) !important;
+    font-family: 'abril fatface';
+    font-weight: bolder;
+    color: rgba(11, 79, 9, 0.773);
+}
+
+.navbar-brand {
+    position: relative !important;
+    margin-left: 2% !important;
+    font-weight: bolder !important;
+    font-size: xx-large !important;
+    font-family: 'Great vibes', cursive !important;
+    color: transparent !important;
+    background-image: linear-gradient(to right, black, #025c80) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+}
+
+
+.navbar-nav {
+    position: relative;
+    margin-left: 50%;
+    font-weight: bold;
+    color: rgba(11, 79, 9, 0.773);
+    font-size: larger;
+}
+
 .nav-link {
     color: black;
 }
-h1 {
-    text-align: center;
-    color: transparent; 
-    font-family: 'Great vibes', cursive;
-    background-image: linear-gradient(to right, black, #025c80); 
-    -webkit-background-clip: text; 
-    background-clip: text; 
-}
-.navbar-brand {
-    position: relative;
-    margin-left: 2%;
-    font-weight: bolder;
-    font-size: xx-large;
-    font-family: 'Great vibes', cursive;
-    color: transparent;
-    background-image: linear-gradient(to right, black, #025c80);
-    -webkit-background-clip: text;
-    background-clip: text; /
-}
-.navbar {
-    background-color:linear-gradient(108deg, #cff4de 0%, #eafff3 100%) !important;
-    font-family: 'abril fatface';
-    font-weight:bolder;
-    color:rgba(11, 79, 9, 0.773);  
-}
-.nav-link{
-    color:black;
-}
+
 .contact {
     margin-bottom: 20px;
     padding: 15px;
@@ -77,16 +63,14 @@ h1 {
     background-color: #f9f9f9;
     background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease-in-out; 
+    transition: all 0.3s ease-in-out;
 }
 
 .contact:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    background-color: #fff; 
+    background-color: #fff;
 }
-
-
 
 .contact h2 {
     margin-top: 0;
@@ -97,3 +81,20 @@ h1 {
 .contact p {
     margin: 5px 0;
 }
+
+.edit-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #023d54;
+    color: white;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-image 0.3s;
+}
+
+.edit-btn:hover {
+    background-image: linear-gradient(45deg, #025c80, #0272a9);
+}
+
